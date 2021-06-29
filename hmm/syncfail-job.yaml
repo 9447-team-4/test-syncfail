@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: ifFail
+  name: syncjob
   annotations:
     argocd.argoproj.io/hook: PreSync
     # argocd.argoproj.io/hook-delete-policy: HookSucceeded
@@ -12,7 +12,7 @@ spec:
       - name: testinghook
         image: apline:latest
         command: ["/bin/sh"]
-        args: ["-c", "echo Hi, Sync failed;"]
+        args: ["-c", "echo Hi, PreSync;"]
       restartPolicy: Never
   backoffLimit: 0
 
