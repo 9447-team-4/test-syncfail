@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ifFail
+  annotations:
+    argocd.argoproj.io/hook: SyncFail
+    # argocd.argoproj.io/hook-delete-policy: HookSucceeded
+spec:
+  template:
+    spec:
+      containers:
+      - name: testinghook
+        image: apline:latest
+        command: ["/bin/sh"]
+        args: ["-c", "echo Hi, Sync failed;"]
+      restartPolicy: Never
+  backoffLimit: 0
+
+  
