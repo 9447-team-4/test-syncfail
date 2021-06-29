@@ -59,9 +59,9 @@ pipeline {
         }
     }
     post {
-        always {
-            echo "HIHIHIHI"
-        }
+        // always {
+        //     echo "HIHIHIHI"
+        // }
         success {
             echo "SUCCESS"
         }
