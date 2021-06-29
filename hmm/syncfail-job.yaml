@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
       - name: testinghook
-        image: apline:latest
+        # image: apline:latest
         command: ["/bin/sh"]
         args: ["-c", "echo Hi, PreSync;"]
       restartPolicy: Never
