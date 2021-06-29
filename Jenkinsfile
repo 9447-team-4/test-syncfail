@@ -57,18 +57,17 @@ pipeline {
                 echo "Hi fuzzer"
             }
         }
-
-        post {
-            always {
-                echo "HIHIHIHI"
-            }
-            success {
-
-            }
-            failure {
-
-            }
-        }
-
     }
+    post {
+        always {
+            echo "HIHIHIHI"
+        }
+        success {
+            echo "SUCCESS"
+        }
+        failure {
+            echo "FAIL"
+        }
+    }
+    
 }
