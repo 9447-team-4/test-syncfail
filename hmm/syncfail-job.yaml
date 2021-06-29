@@ -3,7 +3,7 @@ kind: Job
 metadata:
   name: ifFail
   annotations:
-    argocd.argoproj.io/hook: SyncFail
+    argocd.argoproj.io/hook: PreSync
     # argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
   template:
