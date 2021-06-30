@@ -6,4 +6,4 @@ kind: Kustomization
 resources:
 - nginx-deployment.yaml
 - nginx-svc.yaml
-- syncfail-job.yaml
+# - syncfail-job.yaml
