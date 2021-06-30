@@ -16,7 +16,7 @@ pipeline {
         }
         stage ('Deploy_K8S') {
              steps {
-                     withCredentials([string(credentialsId: "argo", variable: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0MjQxNTU0NS01NDc4LTQ5NWYtYjk1Ni1jNTEzNmU3ZjZjYTYiLCJpYXQiOjE2MjUwMzQ0MzgsImlzcyI6ImFyZ29jZCIsIm5iZiI6MTYyNTAzNDQzOCwic3ViIjoicHJvajpkZWZhdWx0OmplbmtpbnMifQ.uOKvp1WJKEKpZsoIlqGmvlM2SxYdecOdvbQ65Mec-3k')]) {
+                     withCredentials([string(credentialsId: "55c80c17-91f3-487d-b7ad-3b13b13443b2", variable: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI1NWM4MGMxNy05MWYzLTQ4N2QtYjdhZC0zYjEzYjEzNDQzYjIiLCJpYXQiOjE2MjUwMzUzNTIsImlzcyI6ImFyZ29jZCIsIm5iZiI6MTYyNTAzNTM1Miwic3ViIjoicHJvajpkZWZhdWx0OmplbmtpbnMifQ.uezAcODaOUMhj67U10Fw2fsnsjyyNnfSBdtx1enBfP4')]) {
                         sh 'export pwd=$(kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d && echo)'
                   
                         sh "echo $pwd"
